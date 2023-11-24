@@ -12,6 +12,7 @@ void main()
     printf("\n\n Enter the actual starting address : ");
     scanf("%x", &start);
     fp1 = fopen("input.txt", "r");
+    
     fp2 = fopen("output.txt", "w");
     fscanf(fp1, "%s", input);
     fprintf(fp2, " ----------------------------\n");

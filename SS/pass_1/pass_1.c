@@ -6,6 +6,57 @@ After compiling pass1.c & executing a.out ,
 length.txt, intermediate.txt & symtab.txt 
 will be created and output will be writed to it and displayed on terminal
 */
+
+
+/*
+Things to be done 
+1.Create file pointers for all files 
+2.open all files in read and write modes as required
+3.Now create variables start and locctr
+4.read first line of the input.txt file 
+5.check if opcode,"START" are equal 
+     if equal then 
+       a) start=atoi(operand)//to convert the operand from string to integer
+       b)locctr is set to start
+       c)write that line to intermediate.txt
+       d)read the nedt line 
+     else
+        locctr is set to 0
+
+6.Now compare opcode and "END"
+    if not equal 
+       a)read that line to intermediate.txt
+       b)Craete a symtab record by cheking if(label!="**")
+           if label!=** ,add the label and locctr to symtab
+       c)Now to check if opcode js present in the optab or not 
+           i.read the optab line 
+           ii.while code !="END"
+             check if (opcode,code ) ===0
+              then locctr+=3;
+                   break;
+              if not then 
+              read the next line from the optab 
+           iii.end the while
+        d)Now check if (opcode =="WORD")
+           then locctr+=3;
+           else  if
+           if(opcode=="RESW")
+           loctr+=(#*atoi(operand))
+          else if 
+          if (opcode=="BYTE")
+          ++loctr;
+          else if(opcode=="RESB")
+          loctr+=atoi(operand)
+
+ 7.End the while loop ..Now opcode =="END"
+ 8.read the last line 
+ 9.Close all the files
+ 10.now to calculate lenf=gth of the program 
+   length =locctr-start;
+   write the length to length.txt file
+ */
+
+
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -55,7 +106,7 @@ void passOne(char label[10], char opcode[10], char operand[10], char code[10], c
     // iterate till end
     while (strcmp(opcode, "END") != 0) {
 
-        // 1. transfer address and read line to output file
+        // 1. transfer address and read line to output file(intermediate.txt)
         fprintf(fp4, "%d\t%s\t%s\t%s\n", locctr, label, opcode, operand);
 
         // 2. make symtab file with values not starting with **
@@ -152,3 +203,4 @@ void display() {
     }
     fclose(fp3);
 }
+
