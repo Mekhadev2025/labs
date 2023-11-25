@@ -1,5 +1,5 @@
-KTU SEM 5 SS,OS AND MM LAB PROGRAMS 
-1.EMULATOR
-2.KIT
-3.OS
-4.SS
+<h2>KTU SEM 5 SS,OS AND MM LAB PROGRAMS </h2>
+<ol>EMULATOR</ol>
+<ol>KIT</ol>
+<ol>OS</ol>
+<ol>SS</ol>
