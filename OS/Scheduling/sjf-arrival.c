@@ -39,7 +39,7 @@ void tatwt( int ct[], int at[], int bt[], int tat[], int wt[], int n)
    for(i=0;i<n;i++)
    {
 	tat[i]=ct[i]-at[i];
-	wt[i]=tat[i]-bt[I];
+	wt[i]=tat[i]-bt[i];
    }
 }
 int main()
