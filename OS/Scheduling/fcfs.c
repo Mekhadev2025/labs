@@ -1,7 +1,7 @@
 // Scheduling Algorithm
 
 // first come first scheduling algorithm
-
+// without arrival time
 #include <stdio.h>
 
 struct process

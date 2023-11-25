@@ -1,4 +1,4 @@
-
+//fcfs with arriavl time
 #include<stdio.h>
 int main()
 {
