@@ -1,0 +1,12 @@
+PGM	START	0
+.	ABC	P,Q
+-	STA	?Y
+-	STB	?Y
+.	ABC	R,S
+-	STA	?Y
+-	STB	?Y
+P	RESW	1
+Q	RESW	1
+R	RESW	1
+S	RESW	1
+-	END	-
